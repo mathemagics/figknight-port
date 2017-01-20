@@ -42,7 +42,7 @@ const tilesData = [
 
 export default () => {
   return (
-    <div style={styles.root}>
+    <div style={styles.root} className="aboutus">
       <GridList
         cellHeight={180}
         style={styles.gridList}

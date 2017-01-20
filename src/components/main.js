@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Slider from 'react-slick';
+import Paper from 'material-ui/Paper';
 import Slide from './main_slide';
-import HeaderTitle from './header_title';
+import figtree from '../images/figtree2.jpg';
 
 import { setSlide } from '../actions';
 
@@ -31,37 +32,43 @@ class main extends Component {
       slidesToScroll: 1,
       beforeChange: this.props.setSlide,
     };
+    const style = {
+      position: 'relative',
+      top: '5vh',
+      height: 200,
+      width: 300,
+      margin: 20,
+      textAlign: 'left',
+      display: 'inline-block',
+      fontFamily: 'Dosis',
+      paddingTop: '3%',
+    };
     return (
       <div className="main">
-        <HeaderTitle>Fig Knight</HeaderTitle>
+        <div className="main-box">
+          <img alt="fig" src={figtree} className="header-img" />
+          <div className="paper-text">
+            <Paper style={style} zDepth={0} >
+              We help brands <span>stand out</span> and deliver unified,
+              seamless experiences to their customers.
+            </Paper>
+          </div>
+        </div>
         <div className="slider">
-          <Slider {...settings}>
+          <Slider {...settings} className="main-slider">
             <div>
               <Slide>
-                At Fig Knight we understand that a website is more than just
-                a place for information: it is both an extension of your brand
-                and your best salesperson. We believe every business, no matter
-                the size and budget, deserves a cutting-edge website designed
-                to reflect what’s important: your brand.
+                Cutting-edge website design to reflect your brand&#39;s needs
               </Slide>
             </div>
             <div>
               <Slide>
-                It only takes three to five minutes for someone to form a first
-                 impression, and at Fig Knight we know first impressions
-                  matter. We’ll work to provide you with a seamless user
-                   experience that will define your business and keep users
-                    coming back.
+                Seamless User experience that will define your business and keep users coming back.
               </Slide>
             </div>
             <div>
               <Slide>
                 Just because all large businesses have mobile apps doesn’t mean
-                that they should be the only ones with mobile apps. Imagine what
-                your small business could accomplish if its offerings, products,
-                and specials were always inches away from your customer’s fingertips.
-                Fig Knight offers a range of mobile app packages with large business
-                quality at a small business price.
               </Slide>
             </div>
           </Slider>

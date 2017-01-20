@@ -13,5 +13,6 @@ export default (
     <Route path="aboutus" component={AboutUs} />
     <Route path="contact" component={Contact} />
     <Route path="products" component={Products} />
+    <Route path="figknight" component={Main} />
   </Route>
 );
