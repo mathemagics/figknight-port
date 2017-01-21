@@ -1,7 +1,7 @@
 import React from 'react';
 import { GridList, GridTile } from 'material-ui/GridList';
-import pokemango from '../images/grid-list/pokemango.png';
-import beach from '../images/grid-list/1111beach.png';
+import pokemango from '../images/grid-list/pokemango.jpg';
+import beach from '../images/grid-list/1111beach.jpg';
 
 const styles = {
   root: {

@@ -3,7 +3,7 @@ import { GridList, GridTile } from 'material-ui/GridList';
 import paul from '../images/grid-list/paul.jpg';
 import ben from '../images/grid-list/ben.jpg';
 import cd from '../images/grid-list/cd.jpeg';
-import oc from '../images/grid-list/oc.jpeg';
+import oc from '../images/grid-list/oc.jpg';
 
 const styles = {
   root: {
