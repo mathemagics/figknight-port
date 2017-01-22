@@ -1,9 +1,9 @@
 .fig {
     float: left;
-    width: 2vw;
-    height: 2vw;
-    position: relative;
-    left: -12vw;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: -150px;
     animation-name: example;
     animation-duration: 1.5s;
     animation-timing-function: ease-in-out;
@@ -12,23 +12,23 @@
 
 @keyframes example {
     0%   {
-      width: 0vw;
-      height: 0vw;
+      width: 0;
+      height: 0;
     }
     25%  {
-      width: 1vw;
-      height: 1vw;
+      width: 8px;
+      height: 8px;
     }
     50%  {
-      width: 1.5vw;
-      height: 1.5vw;
+      width: 15px;
+      height: 15px;
     }
     75%  {
-      width: 2.2vw;
-      height: 2.2vw;
+      width: 22px;
+      height: 22px;
   }
     100% {
-      width: 2vw;
-      height: 2vw;
+      width: 18px;
+      height: 18px;
   }
 }
