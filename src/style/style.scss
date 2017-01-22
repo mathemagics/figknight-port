@@ -1,3 +1,15 @@
+.app {
+  position: fixed;
+  left: 0px;
+  height: 100vh;
+  width: 100vw;
+  background-color: #fff;
+}
+
+.content {
+  margin-top: 15vh;
+}
+
 .header {
   list-style-type: none;
   position: fixed;
@@ -49,6 +61,17 @@
       color: #f96b61;
       border-bottom: 1px solid #8ec4ac;
     }
+    section {
+      position: relative;
+      top: 5vh;
+      height: 200px;
+      width: 300px;
+      margin: 20px;
+      text-align: left;
+      display: inline-block;
+      font-family: 'Dosis', sans-serif;
+      padding-top: '3%';
+    }
   }
 }
 
@@ -92,13 +115,6 @@
   width: 50vw;
 }
 
-// .main-btn {
-//   background-color: rgba(0, 0, 0, 0);
-//   color: #ddd;
-//   border: none;
-//   cursor: pointer;
-// }
-
 .btn-highlighted {
   transition: all 0.2s ease-in-out;
   color: #f96b61 !important;
@@ -108,14 +124,6 @@
   top: 6vh;
 }
 
-.app {
-  position: fixed;
-  left: 0px;
-  height: 100vh;
-  width: 100vw;
-  background-color: #fff;
-}
-
 .info-list {
   position: relative;
   list-style-type: none;
@@ -123,18 +131,15 @@
   padding: 0;
   z-index: 1;
   top: -37vh;
-}
-.info-list li {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.2em;
-  display: inline-block;
-  color: #8ec4ac;
-  padding: 0px 10px;
-  cursor: pointer;
-}
 
-.content {
-  margin-top: 40px;
+  li {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    display: inline-block;
+    color: #8ec4ac;
+    padding: 0px 10px;
+    cursor: pointer;
+  }
 }
 
 @media(min-height:900px){
@@ -162,18 +167,9 @@
   }
 }
 
-.contact {
-  margin-top: 8vh;
-  width: 100vw;
-  height: 90vh;
-  display: flex;
-  align-items: flex-start;;
-  justify-content: center;
-}
-
+.contact,
 .products,
 .aboutus {
-  margin-top: 15vh;
   width: 100vw;
   height: 90vh;
   display: flex;

@@ -7,7 +7,6 @@ export default (props) => {
   return (
     <MuiThemeProvider>
       <div className="app">
-        <div className="background-image" />
         <Header links={['Fig Knight', 'Products', 'About Us', 'Contact']} />
         <div className="content">
           {props.children}

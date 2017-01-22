@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Slider from 'react-slick';
-import Paper from 'material-ui/Paper';
 import Devices from 'material-ui/svg-icons/hardware/devices-other';
 import Computer from 'material-ui/svg-icons/hardware/laptop-mac';
 import UX from 'material-ui/svg-icons/action/face';
@@ -36,26 +35,16 @@ class main extends Component {
       slidesToScroll: 1,
       beforeChange: this.props.setSlide,
     };
-    const style = {
-      position: 'relative',
-      top: '5vh',
-      height: 200,
-      width: 300,
-      margin: 20,
-      textAlign: 'left',
-      display: 'inline-block',
-      fontFamily: 'Dosis',
-      paddingTop: '3%',
-    };
+
     return (
       <div className="main">
         <article>
           <img alt="fig" src={figtree} className="logo-img" />
           <div>
-            <div style={style}>
+            <section>
               We help brands <span>stand out</span> and deliver unified,
               seamless experiences to their customers.
-            </div>
+            </section>
           </div>
         </article>
         <div className="slider">

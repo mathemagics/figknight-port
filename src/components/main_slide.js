@@ -3,7 +3,7 @@ import React from 'react';
 export default (props) => {
   return (
     <div className="main-slide">
-        {props.children}
+      {props.children}
     </div>
   );
 };
