@@ -2,6 +2,8 @@ import React from 'react';
 import _ from 'lodash';
 import Action from './action';
 
+import '../style/header.scss';
+
 const renderActions = (actions) => {
   return _.map(actions, (action) => {
     return (

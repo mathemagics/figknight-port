@@ -10,6 +10,8 @@ import figtree from '../images/figtree2.jpg';
 
 import { setSlide } from '../actions';
 
+import '../style/slider.scss';
+
 class main extends Component {
   render() {
     const settings = {

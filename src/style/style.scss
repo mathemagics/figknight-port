@@ -10,40 +10,6 @@
   margin-top: 15vh;
 }
 
-.header {
-  list-style-type: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 10vh;
-  background-color: rgba(0, 0, 0, 0);
-
-  li {
-    float: right;
-    font-family: 'Dosis', sans-serif;
-    font-size: 1.3em;
-    text-align: center;
-    padding: 20px 20px;
-
-    &:first-child {
-      float: left;
-    }
-  }
-
-  a {
-    padding-bottom: 3px;
-    color: #333 !important;
-    text-decoration: none !important;
-    border-bottom: 3px solid rgba(255, 255, 255, 0);
-    transition: all 0.3s ease-in-out;
-
-    &:hover {
-      border-bottom: 3px solid #8ec4ac;
-    }
-  }
-}
-
 .main {
   display: flex;
   flex-direction: column;
@@ -56,6 +22,12 @@
     justify-content: center;
     font-family: 'Roboto', sans-serif;
     font-size: 1.5em;
+
+    @media(min-height: 900px) {
+      font-size: 2.5em;
+      position: relative;
+      top: 4vh;
+    }
 
     span {
       color: #f96b61;
@@ -82,88 +54,10 @@
   z-index: -1;
   height: 200px;
   width: 200px;
-}
 
-.main-slide {
-  display: flex;
-  position: relative;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 40vh;
-  width: 100%;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.01);
-  color: #444;
-}
-
-.slide-contents {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  top: 1vh;
-  height: 17vh;
-}
-
-.slide-text {
-  position: relative;
-  top: 12vh;
-  padding-left: 4vw;
-  line-height: 1.375em;
-  text-align: left;
-  height: 80%;
-  width: 50vw;
-}
-
-.btn-highlighted {
-  transition: all 0.2s ease-in-out;
-  color: #f96b61 !important;
-}
-.slider {
-  position: relative;
-  top: 6vh;
-}
-
-.info-list {
-  position: relative;
-  list-style-type: none;
-  text-align: center;
-  padding: 0;
-  z-index: 1;
-  top: -37vh;
-
-  li {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.2em;
-    display: inline-block;
-    color: #8ec4ac;
-    padding: 0px 10px;
-    cursor: pointer;
-  }
-}
-
-@media(min-height:900px){
-  .slide-text{
-    font-size: 2em;
-    }
-  .main-btn {
-    font-size: 2em;
-    line-height: 1.4em;
-  }
-  .main-box {
-    font-size: 2.5em;
-    position: relative;
-    top: 4vh;
-  }
-  .header {
-    font-size: 2em;
-  }
-  .header-text {
-    font-size: 2em;
-  }
-  .logo-img {
-    height: 400px !important;
-    width: 400px !important;
+  @media(min-height: 900px) {
+      height: 400px !important;
+      width: 400px !important;
   }
 }
 
