@@ -25,10 +25,11 @@ const config = {
         exclude: /node_modules/,
       },
       {
+        test: /\.scss$/,
         loader: ExtractTextPlugin.extract({
-          loader: 'css-loader',
+          fallbackLoader: 'style-loader',
+          loader: 'css-loader!sass-loader',
         }),
-        test: /\.css$/,
       },
       {
         test: /\.(otf|ttf|svg|eot)$/,

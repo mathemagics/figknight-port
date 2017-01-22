@@ -7,7 +7,7 @@ import { Router, browserHistory } from 'react-router';
 
 import routes from './router';
 import reducers from './reducers/';
-import './style/style.css';
+import './style/style.scss';
 
 const App = () => {
   /* eslint-disable no-underscore-dangle */
