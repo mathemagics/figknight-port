@@ -26,7 +26,7 @@
     @media(min-height: 900px) {
       font-size: 2.5em;
       position: relative;
-      top: 4vh;
+      top: -3vh;
     }
 
     span {
@@ -43,6 +43,10 @@
       display: inline-block;
       font-family: 'Dosis', sans-serif;
       padding-top: '3%';
+
+      @media(min-height: 900px) {
+        top: -0.5vh;
+      }
     }
   }
 }
@@ -56,8 +60,8 @@
   width: 200px;
 
   @media(min-height: 900px) {
-      height: 400px !important;
-      width: 400px !important;
+      height: 450px !important;
+      width: 450px !important;
   }
 }
 
