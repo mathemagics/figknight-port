@@ -7,10 +7,12 @@ import UX from 'material-ui/svg-icons/action/face';
 
 import Slide from './main_slide';
 import figtree from '../images/figtree2.jpg';
+import fig from '../images/figlogo.png';
 
 import { setSlide } from '../actions';
 
 import '../style/slider.scss';
+import '../style/figs.scss';
 
 class main extends Component {
   render() {
@@ -42,6 +44,9 @@ class main extends Component {
       <div className="main">
         <article>
           <img alt="fig" src={figtree} className="logo-img" />
+          <div style={{ position: 'relative', width: 0, height: 0 }}>
+            <img alt="fig" src={fig} className="fig" />
+          </div>
           <div>
             <section>
               We help brands <span>stand out</span> and deliver unified,
