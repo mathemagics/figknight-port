@@ -49,15 +49,15 @@ class main extends Component {
     };
     return (
       <div className="main">
-        <div className="main-box">
-          <img alt="fig" src={figtree} className="header-img" />
-          <div className="paper-text">
+        <article>
+          <img alt="fig" src={figtree} className="logo-img" />
+          <div>
             <Paper style={style} zDepth={0} >
               We help brands <span>stand out</span> and deliver unified,
               seamless experiences to their customers.
             </Paper>
           </div>
-        </div>
+        </article>
         <div className="slider">
           <Slider {...settings} className="main-slider">
             <div>
