@@ -17,11 +17,11 @@ class main extends Component {
       customPaging: (i) => {
         switch (i) {
           case 0:
-            return <a className={`main-btn ${this.props.slide === 0 ? 'btn-highlighted' : ''}`}>Web Design</a>;
+            return <a className={this.props.slide === 0 ? 'btn-highlighted' : ''}>Web Design</a>;
           case 1:
-            return <a className={`main-btn ${this.props.slide === 1 ? 'btn-highlighted' : ''}`}>User Experience</a>;
+            return <a className={this.props.slide === 1 ? 'btn-highlighted' : ''}>User Experience</a>;
           case 2:
-            return <a className={`main-btn ${this.props.slide === 2 ? 'btn-highlighted' : ''}`}>Mobile Apps</a>;
+            return <a className={this.props.slide === 2 ? 'btn-highlighted' : ''}>Mobile Apps</a>;
           default:
             return null;
         }
@@ -52,10 +52,10 @@ class main extends Component {
         <article>
           <img alt="fig" src={figtree} className="logo-img" />
           <div>
-            <Paper style={style} zDepth={0} >
+            <div style={style}>
               We help brands <span>stand out</span> and deliver unified,
               seamless experiences to their customers.
-            </Paper>
+            </div>
           </div>
         </article>
         <div className="slider">

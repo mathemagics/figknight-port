@@ -9,6 +9,10 @@
 
   li {
     float: right;
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.3em;
+    text-align: center;
+    padding: 20px 20px;
 
     &:first-child {
       float: left;
@@ -40,6 +44,11 @@
     justify-content: center;
     font-family: 'Roboto', sans-serif;
     font-size: 1.5em;
+
+    span {
+      color: #f96b61;
+      border-bottom: 1px solid #8ec4ac;
+    }
   }
 }
 
@@ -50,13 +59,6 @@
   z-index: -1;
   height: 200px;
   width: 200px;
-}
-
-
-
-.main-box span {
-  color: #f96b61;
-  border-bottom: 1px solid #8ec4ac;
 }
 
 .main-slide {
@@ -80,53 +82,22 @@
   height: 17vh;
 }
 
-.main-slide img {
-  margin: 0 20px;
-  width: 40px;
-  height: 70px;
-}
-
 .slide-text {
   position: relative;
-  top: -4v;
+  top: 12vh;
   padding-left: 4vw;
-  font-size: 1em;
   line-height: 1.375em;
   text-align: left;
   height: 80%;
   width: 50vw;
 }
-@media(min-height:900px){
-  .slide-text{
-    font-size: 2em;
-    }
-  .main-btn {
-    font-size: 2em;
-    line-height: 1.4em;
-  }
-  .main-box {
-    font-size: 2.5em;
-    position: relative;
-    top: 4vh;
-  }
-  .header {
-    font-size: 2em;
-  }
-  .header-text {
-    font-size: 2em;
-  }
-  .logo-img {
-    height: 400px !important;
-    width: 400px !important;
-  }
-}
 
-.main-btn {
-  background-color: rgba(0, 0, 0, 0);
-  color: #ddd;
-  border: none;
-  cursor: pointer;
-}
+// .main-btn {
+//   background-color: rgba(0, 0, 0, 0);
+//   color: #ddd;
+//   border: none;
+//   cursor: pointer;
+// }
 
 .btn-highlighted {
   transition: all 0.2s ease-in-out;
@@ -134,7 +105,7 @@
 }
 .slider {
   position: relative;
-  top: 10vh;
+  top: 6vh;
 }
 
 .app {
@@ -159,23 +130,36 @@
   display: inline-block;
   color: #8ec4ac;
   padding: 0px 10px;
+  cursor: pointer;
 }
 
 .content {
   margin-top: 40px;
 }
 
-.actions {
-  display: flex;
-  flex-direction: row;
-  float: left;
-}
-
-.action {
-  font-family: 'Dosis', sans-serif;
-  font-size: 1.3em;
-  text-align: center;
-  padding: 20px 20px;
+@media(min-height:900px){
+  .slide-text{
+    font-size: 2em;
+    }
+  .main-btn {
+    font-size: 2em;
+    line-height: 1.4em;
+  }
+  .main-box {
+    font-size: 2.5em;
+    position: relative;
+    top: 4vh;
+  }
+  .header {
+    font-size: 2em;
+  }
+  .header-text {
+    font-size: 2em;
+  }
+  .logo-img {
+    height: 400px !important;
+    width: 400px !important;
+  }
 }
 
 .contact {
