@@ -5,7 +5,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const VENDOR_LIBS = [
   'react', 'lodash', 'redux', 'react-redux', 'react-dom', 'react-router',
-  'redux-thunk',
+  'redux-thunk', 'redux-form', 'react-slick', 'material-ui', 'redux-form-material-ui',
+  'react-tap-event-plugin',
 ];
 
 const config = {
