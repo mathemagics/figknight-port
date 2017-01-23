@@ -1,25 +1,43 @@
-import React from 'react';
-import Paper from 'material-ui/Paper';
+import React, { Component, PropTypes } from 'react';
+import { Field, reduxForm } from 'redux-form';
+import { TextField } from 'redux-form-material-ui';
 
-export default () => {
-  const style = {
-    position: 'relative',
-    top: '5vh',
-    height: 200,
-    width: 300,
-    margin: 20,
-    textAlign: 'left',
-    display: 'inline-block',
-    fontFamily: 'Dosis',
-    paddingTop: '3%',
-  };
-  return (
-    <div className="contact">
-      <Paper style={style} zDepth={0} >
-        2631 Pandora St.
-        Vancouver BC, Canada
-        V5K-1V9
-      </Paper>
-    </div>
-  );
+const required = (value) => {
+  return value == null ? 'Required' : undefined;
 };
+const email = (value) => {
+  return value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ?
+  'Invalid email' :
+  undefined;
+};
+
+class Contact extends Component {
+  static contextTypes = {
+    router: PropTypes.object,
+  };
+
+  handleSubmit() {
+    console.log(this);
+  }
+  render() {
+    return (
+      <div className="contact">
+        <form onSubmit={this.handleSubmit}>
+          <div>
+            <Field
+              name="email"
+              component={TextField}
+              hintText="you@email.com"
+              floatingLabelText="Email"
+              validate={[required, email]}
+            />
+          </div>
+        </form>
+      </div>
+    );
+  }
+}
+
+export default reduxForm({
+  form: 'contact',
+})(Contact);
