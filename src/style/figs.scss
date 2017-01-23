@@ -5,6 +5,11 @@
     animation: appear 1s ease-in-out;
     animation-fill-mode: backwards;
     z-index: 2;
+
+    @media(min-height:900px) {
+      height: 38px;
+      width: 38px;
+    }
 }
 
 @keyframes appear {
@@ -15,18 +20,26 @@
     25%  {
       width: 8px;
       height: 8px;
+      transform: rotate(20deg);
+      -webkit-transform: rotate(20deg);
     }
     50%  {
       width: 15px;
       height: 15px;
+      transform: rotate(-20deg);
+      -webkit-transform: rotate(-20deg);
     }
     75%  {
       width: 20px;
       height: 20px;
+      transform: rotate(-20deg);
+      -webkit-transform: rotate(-20deg);
   }
     100% {
       width: 18px;
       height: 18px;
+      transform: rotate(20deg);
+      -webkit-transform: rotate(20deg);
   }
 }
 
@@ -34,15 +47,30 @@
   @extend .fig;
   left: -100px;
   top: -30px;
+
+  @media(min-height:900px) {
+    left: -360px;
+    top: -50px;
+  }
 }
 .fig2 {
   @extend .fig;
   left: -130px;
   top: -70px;
   animation-delay: 2.2s;
+
+  @media(min-height:900px) {
+    left: -310px;
+    top: -170px;
+  }
 }
 .fig3 {
   @extend .fig;
-  left: -150px;
+  left: -170px;
   animation-delay: 1s;
+
+  @media(min-height:900px) {
+    left: -170px;
+    top: -70px;
+  }
 }
