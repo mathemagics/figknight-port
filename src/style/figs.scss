@@ -1,16 +1,13 @@
 .fig {
-    float: left;
     width: 18px;
     height: 18px;
     position: absolute;
-    left: -150px;
-    animation-name: example;
-    animation-duration: 1.5s;
-    animation-timing-function: ease-in-out;
+    animation: appear 1s ease-in-out;
+    animation-fill-mode: backwards;
     z-index: 2;
 }
 
-@keyframes example {
+@keyframes appear {
     0%   {
       width: 0;
       height: 0;
@@ -24,11 +21,28 @@
       height: 15px;
     }
     75%  {
-      width: 22px;
-      height: 22px;
+      width: 20px;
+      height: 20px;
   }
     100% {
       width: 18px;
       height: 18px;
   }
+}
+
+.fig1 {
+  @extend .fig;
+  left: -100px;
+  top: -30px;
+}
+.fig2 {
+  @extend .fig;
+  left: -130px;
+  top: -70px;
+  animation-delay: 2.2s;
+}
+.fig3 {
+  @extend .fig;
+  left: -150px;
+  animation-delay: 1s;
 }

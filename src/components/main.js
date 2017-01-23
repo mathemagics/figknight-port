@@ -45,7 +45,9 @@ class main extends Component {
         <article>
           <img alt="fig" src={figtree} className="logo-img" />
           <div style={{ position: 'relative', width: 0, height: 0 }}>
-            <img alt="fig" src={fig} className="fig" />
+            <img alt="fig" src={fig} className="fig1" />
+            <img alt="fig" src={fig} className="fig2" />
+            <img alt="fig" src={fig} className="fig3" />
           </div>
           <div>
             <section>
