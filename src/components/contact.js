@@ -25,12 +25,35 @@ class Contact extends Component {
         <form onSubmit={this.handleSubmit}>
           <div>
             <Field
+              name="name"
+              component={TextField}
+              hintText="Your Name"
+              floatingLabelText="Name"
+              validate={[required]}
+            />
+          </div>
+          <div>
+            <Field
               name="email"
               component={TextField}
               hintText="you@email.com"
               floatingLabelText="Email"
               validate={[required, email]}
             />
+          </div>
+          <div>
+            <Field
+              name="message"
+              component={TextField}
+              hintText="Connect With Us!"
+              floatingLabelText="Message"
+              validate={[required]}
+              multiLine
+              rows={2}
+            />
+          </div>
+          <div>
+            <button type="submit">Submit</button>
           </div>
         </form>
       </div>
