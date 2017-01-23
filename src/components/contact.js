@@ -1,6 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { TextField } from 'redux-form-material-ui';
+import FlatButton from 'material-ui/FlatButton';
+import injectTapEventPlugin from 'react-tap-event-plugin';
 
 const required = (value) => {
   return value == null ? 'Required' : undefined;
@@ -11,12 +13,15 @@ const email = (value) => {
   undefined;
 };
 
+injectTapEventPlugin();
+
 class Contact extends Component {
   static contextTypes = {
     router: PropTypes.object,
   };
 
-  handleSubmit() {
+  handleSubmit(e) {
+    e.preventDefault();
     console.log(this);
   }
   render() {
@@ -53,7 +58,7 @@ class Contact extends Component {
             />
           </div>
           <div>
-            <button type="submit">Submit</button>
+            <FlatButton style={{ color: '#8ec4ac', float: 'right' }} type="submit">Submit</FlatButton>
           </div>
         </form>
       </div>
