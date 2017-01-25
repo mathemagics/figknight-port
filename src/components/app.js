@@ -7,7 +7,7 @@ export default (props) => {
   return (
     <MuiThemeProvider>
       <div className="app">
-        <Header links={['Fig Knight', 'Products', 'About Us', 'Contact']} />
+        <Header links={['Alchemist', 'Products', 'About Us', 'Contact']} />
         <div className="content">
           {props.children}
         </div>
