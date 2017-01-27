@@ -12,10 +12,6 @@ export default (props) => {
         <div className="content">
           {props.children}
         </div>
-        <Modal>
-          <h1>Hi there</h1>
-          <p>its me</p>
-        </Modal>
       </div>
     </MuiThemeProvider>
   );
