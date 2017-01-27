@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { GridList, GridTile } from 'material-ui/GridList';
 import pokemango from '../images/grid-list/pokemango.jpg';
 import beach from '../images/grid-list/1111beach.jpg';
-import toggleModal from '../actions';
+import { toggleModal } from '../actions';
 import Modal from './modal';
 
 const styles = {
@@ -32,7 +32,11 @@ class Products extends Component {
   }
 
   renderModal = (num) => {
-    return <Modal selection={num} />;
+    return (
+      <Modal selection={num}>
+        <h1> hi </h1>
+      </Modal>
+    );
   };
 
   render() {

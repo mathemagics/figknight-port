@@ -1,7 +1,7 @@
 import {
   SET_SLIDE,
   TOGGLE_MODAL,
-} from '../actions';
+} from '../actions/types';
 
 const INITIAL_STATE = {
   slide: 0,
