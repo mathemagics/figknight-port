@@ -1,16 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { GridList, GridTile } from 'material-ui/GridList';
 import pokemango from '../images/grid-list/pokemango.jpg';
 import beach from '../images/grid-list/1111beach.jpg';
 import toggleModal from '../actions';
+import Modal from './modal';
 
 const styles = {
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-  },
   gridList: {
     width: 500,
     height: 450,
@@ -28,35 +24,46 @@ const tilesData = [
   },
 ];
 
-// const renderModal = () => {
-// };
+class Products extends Component {
+  selectModal = (num) => {
+    return () => {
+      return this.props.toggleModal(num);
+    };
+  }
 
-const Modal = () => {
-  return (
-    <div style={styles.root} className="aboutus">
-      <GridList
-        cellHeight={180}
-        style={styles.gridList}
-      >
-        {tilesData.map((tile) => {
-          return (
-            <GridTile
-              key={tile.img}
-              title={tile.title}
-              subtitle={<span><b>{tile.author}</b></span>}
-            >
-              <img alt="bg" src={tile.img} />
-            </GridTile>
-          );
-        })}
-      </GridList>
-    </div>
-  );
-};
+  renderModal = (num) => {
+    return <Modal selection={num} />;
+  };
+
+  render() {
+    const { modal } = this.props;
+    return (
+      <div className="aboutus">
+        {modal !== 0 ? this.renderModal(modal) : null}
+        <GridList
+          cellHeight={180}
+          style={styles.gridList}
+        >
+          {tilesData.map((tile) => {
+            return (
+              <GridTile
+                key={tile.img}
+                title={tile.title}
+                subtitle={<span><b>{tile.author}</b></span>}
+              >
+                <img alt="bg" src={tile.img} />
+              </GridTile>
+            );
+          })}
+        </GridList>
+      </div>
+    );
+  }
+}
 
 const mapStateToProps = ({ main }) => {
   const { modal } = main;
   return { modal };
 };
 
-export default connect(mapStateToProps, { toggleModal })(Modal);
+export default connect(mapStateToProps, { toggleModal })(Products);

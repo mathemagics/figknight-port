@@ -6,11 +6,6 @@ import cd from '../images/grid-list/cd.jpeg';
 import oc from '../images/grid-list/oc.jpg';
 
 const styles = {
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-  },
   gridList: {
     width: 500,
     height: 450,
@@ -42,7 +37,7 @@ const tilesData = [
 
 export default () => {
   return (
-    <div style={styles.root} className="aboutus">
+    <div className="aboutus">
       <GridList
         cellHeight={180}
         style={styles.gridList}

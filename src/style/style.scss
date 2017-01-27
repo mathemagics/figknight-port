@@ -80,12 +80,19 @@
   }
 }
 
+.gridList {
+  width: 50vw;
+  height: 50vh;
+  overflow-y: auto;
+}
+
 .contact,
 .products,
 .aboutus {
   width: 100vw;
   height: 90vh;
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: center;
 }
