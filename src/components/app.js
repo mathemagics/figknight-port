@@ -1,6 +1,7 @@
 import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Header from './header';
+import Modal from './modal';
 
 export default (props) => {
   // const fadeConfig = { stiffness: 200, damping: 22 };
@@ -11,6 +12,10 @@ export default (props) => {
         <div className="content">
           {props.children}
         </div>
+        <Modal>
+          <h1>Hi there</h1>
+          <p>its me</p>
+        </Modal>
       </div>
     </MuiThemeProvider>
   );
