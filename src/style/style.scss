@@ -72,6 +72,12 @@
   height: 100vh;
   overflow: auto;
   display: block;
+
+  .modal-main {
+    width: 80vw;
+    height: 80vh;
+    background-color: #fff;
+  }
 }
 
 .contact,

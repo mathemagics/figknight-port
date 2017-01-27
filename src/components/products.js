@@ -1,7 +1,9 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { GridList, GridTile } from 'material-ui/GridList';
 import pokemango from '../images/grid-list/pokemango.jpg';
 import beach from '../images/grid-list/1111beach.jpg';
+import toggleModal from '../actions';
 
 const styles = {
   root: {
@@ -26,7 +28,10 @@ const tilesData = [
   },
 ];
 
-export default () => {
+// const renderModal = () => {
+// };
+
+const Modal = () => {
   return (
     <div style={styles.root} className="aboutus">
       <GridList
@@ -48,3 +53,10 @@ export default () => {
     </div>
   );
 };
+
+const mapStateToProps = ({ main }) => {
+  const { modal } = main;
+  return { modal };
+};
+
+export default connect(mapStateToProps, { toggleModal })(Modal);

@@ -90,8 +90,8 @@ class main extends Component {
     );
   }
 }
-const mapStateToProps = ({ mainSlides }) => {
-  const { slide } = mainSlides;
+const mapStateToProps = (state) => {
+  const { slide } = state.main;
   return { slide };
 };
 
